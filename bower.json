@@ -1,0 +1,17 @@
+{
+  "name": "travels",
+  "description": "backend travels",
+  "main": "",
+  "authors": [
+    "victor ordax <victorordaxantolin@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/worrison/Travels",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
