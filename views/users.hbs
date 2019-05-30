@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+<p>list users{{title}}</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Rol</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <td></td>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+      <td>{{#if rol}}Admin{{else}}User{{/if}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+
+
+
+
+
