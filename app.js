@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var travelsRouter = require('./routes/travels');
+var travelsApiRouter = require('./routes/api/travelsApi'); // Router de la API viajes importado
 
 var hbs= require('hbs');
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/travels', travelsRouter);
+app.use('/api/travelsApi', travelsApiRouter); // Ruta para api travels
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -11,4 +11,20 @@ router.get('/', async(req, res) =>{
   });
 });
 
+router.get('/add', async(req, res) =>{
+  res.render('travels/add');
+});
+
+
+// Post que se llama desde el formulario
+router.post('/add', async (req, res) => {
+    console.log(req.body)
+    let result = await travelsController.addTravel(req.body);
+    res.render('travels/added', {result});
+})
+
+
+
+
+
 module.exports = router;

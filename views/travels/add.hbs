@@ -1,0 +1,27 @@
+<form action="/travels/add" method="post">
+  
+    <label for="fechaSalida">Fecha salida</label>
+    <input type="date" class="form-control" name="fecha_salida" id="inputFechaSalida" >
+
+    <label for="fechaLlegada">Fecha llegada</label>
+    <input type="date" class="form-control" name="fecha_llegada" id="inputFechaLlegada" >
+
+    <label for="Precio">Precio</label>
+    <input type="number" class="form-control" name="precio" id="inputPrecio" >
+
+    <label for="Descuento">Descuento</label>
+    <input type="number" class="form-control" name="descuento" id="inputDescuento" >
+    {{!-- <input type="text" class="form-control" name="destino" id="destino" placeholder="destino"> --}}
+  
+  
+    <label for="exampleFormControlSelect1">Destino</label>
+    <select class="form-control"  name="destino" id="exampleFormControlSelect1">
+      <option>Alicante</option>
+      <option>Roma</option>
+      <option>París</option>
+      <option>Madrid</option>
+      <option>Londres</option>
+    </select>
+  
+  <input  class="btn btn-primary" type="submit">Add</input>
+</form>

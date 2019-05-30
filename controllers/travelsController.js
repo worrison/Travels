@@ -12,6 +12,17 @@ function getTravels(){
     })
 }
 
+// Controlador que añade un viaje  y devuelve
+function addTravel(travel){
+    return new Promise((resolve, reject) => {
+        CONN.query("INSERT INTO travels SET ?", [travel], (err, result) => {
+            CONN.query("SELECT * FROM travels WHERE id = ?", [result.insertId], (selErr, travel) => {
+                resolve(travel[0]);
+            });
+        });
+    })
+}
 module.exports = {
-    getTravels
+    getTravels,
+    addTravel
 }
